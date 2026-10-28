@@ -54,7 +54,7 @@ import java.time.YearMonth
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { AppTheme { App() } }
+        setContent { AppTheme { FinanzasApp() } }
     }
 }
 
@@ -75,7 +75,7 @@ private val tabs = listOf(
 )
 
 @Composable
-private fun App() {
+private fun FinanzasApp() {
     val ctx = LocalContext.current
     fun granted(p: String) = ContextCompat.checkSelfPermission(ctx, p) == PackageManager.PERMISSION_GRANTED
     var tab by remember { mutableIntStateOf(0) }
